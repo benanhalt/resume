@@ -6,3 +6,13 @@ before_install:
 
 script:
   pdflatex ben_resume.tex
+
+deploy:
+  provider: releases
+  api_key:
+    secure: PAgkGssBM3XqkhaZwiPQYUoddH4GgOMLwDqJtnkIb3BWgCKZRoe0hZh2valKdsOwIcIWJVTbTVPGTWNS4fxVnybys2/0QOuyOC0ZcsUDWOMbeGCIJDnSS2ciNK0tuSvxYfV/gY+6N0i4SMHsiQpu3P0//FGFQ0UUYeo+32GeFVoaU6nMpmfiNUHTqQ2H705yhC9KvCARl2xC5DarGQdp2TmmQiy1cICWcWhvgl76CrFczBxR9TNdKejos3radUK8tyR8v5fhHTx5MXEiqyjtVsS/f1um7F7gwVVtaw/6J9tQMRNDHgthuTPqbPZEMIyNoBpV7HdzjeoCPi1mgdQHculzDyl/zEBa5sDc5LK4wvXUqXofKdBcmdmgFUT4GtbqaztDOQ/jNuoj2EVUGFNupXvDv3rG+GYUkjP6bPdMvM2/cqWMdVCLM+exKoI7+O+cYybg1up5l+n0MhBlGpd60IDhmxKMTWlvGuFBCux6SbWX3SsItsKebANeQp1rkG90SaC/t6TphplGtCWqHjHiO5zwwwruoLmH2N9bcUpSsbwxenmvNQndOMfuyWJFOEDpc5JXIqtTMA3KmtR/iEBEvuj2QqWTXo2WPYicvaCtTmIowQHBBuifX+blXhUWX7/+pKRDjwIgFQ3qJq8/671+uKsvqj99evIxnaNSQx9S6xk=
+  file: ben_resume.pdf
+  skip_cleanup: true
+  on:
+    repo: benanhalt/resume
+    tags: true
